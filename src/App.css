@@ -1,38 +1,476 @@
-.App {
-  text-align: center;
+/* ========================================
+   THEME VARIABLES
+   ======================================== */
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-primary: #0a0e27;
+  --bg-secondary: #131a35;
+  --bg-tertiary: #1a2342;
+  --text-primary: #e8f1ff;
+  --text-secondary: #a8b8d8;
+  --text-muted: #6b7a99;
+  
+  /* Tech Blue & Bone White Palette */
+  --blue-light: #66C1FF;
+  --blue-medium: #389ADD;
+  --blue-dark: #0098FF;
+  --blue-darker: #005B99;
+  --bone-white: #F5F0E8;
+  --bone-muted: rgba(245, 240, 232, 0.15);
+  
+  /* Primary & Accent */
+  --primary: #0098FF;
+  --primary-glow: rgba(0, 152, 255, 0.3);
+  --secondary: #389ADD;
+  --accent: #66C1FF;
+  
+  /* Octa accent colors (from SVGs) */
+  --octa-blue: #0098FF;
+  --octa-cyan: #389ADD;
+  --octa-ice: #ADF8FF;
+  --octa-bone: #D9D9D9;
+  
+  /* Card & Surface */
+  --card-bg: rgba(26, 35, 66, 0.8);
+  --card-border: rgba(0, 152, 255, 0.2);
+  --card-hover: rgba(0, 152, 255, 0.1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #f0f7ff;
+  --bg-secondary: #e1f0ff;
+  --bg-tertiary: #d4e9ff;
+  --text-primary: #0a2540;
+  --text-secondary: #1e4976;
+  --text-muted: #547599;
+  
+  --blue-light: #80c4ff;
+  --blue-medium: #4da3ff;
+  --blue-dark: #2d7dd2;
+  --blue-darker: #1e5ba8;
+  --bone-white: #F5F0E8;
+  --bone-muted: rgba(245, 240, 232, 0.3);
+  
+  --primary: #2d7dd2;
+  --primary-glow: rgba(45, 125, 210, 0.2);
+  --secondary: #1e5ba8;
+  --accent: #4da3ff;
+  
+  --octa-blue: #2d7dd2;
+  --octa-cyan: #389ADD;
+  --octa-ice: #66C1FF;
+  --octa-bone: #C8C3BB;
+  
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(45, 125, 210, 0.2);
+  --card-hover: rgba(45, 125, 210, 0.05);
+  
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   BACKGROUND PATTERN (subtle grid)
+   ======================================== */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      var(--primary) 0px,
+      transparent 1px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      var(--primary) 0px,
+      transparent 1px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      120deg,
+      var(--primary) 0px,
+      transparent 1px,
+      transparent 50px
+    );
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+[data-theme="light"] body::before {
+  opacity: 0.02;
+}
+
+/* ========================================
+   OCTAGRAM SVG DECORATION SYSTEM
+   ======================================== */
+
+.octagram-system {
+  position: fixed;
+  top: -150px;
+  right: -150px;
+  width: 700px;
+  height: 700px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Center octagram - main piece */
+.octagram-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  opacity: 0.07;
+  animation: octa-pulse 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(0, 152, 255, 0.15));
+}
+
+[data-theme="light"] .octagram-center {
+  opacity: 0.04;
+  filter: drop-shadow(0 0 20px rgba(45, 125, 210, 0.1));
+}
+
+/* Orbit tracks (Garis Lintasan Orbit) */
+.octa-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(0, 152, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+[data-theme="light"] .octa-track {
+  border-color: rgba(45, 125, 210, 0.05);
+}
+
+.octa-track-1 {
+  width: 500px;
+  height: 500px;
+}
+
+.octa-track-2 {
+  width: 300px;
+  height: 300px;
+}
+
+.octa-track-3 {
+  width: 700px;
+  height: 700px;
+}
+
+/* Orbiting octa pieces */
+.octa-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.08;
+  filter: drop-shadow(0 0 10px rgba(0, 152, 255, 0.12));
+}
+
+[data-theme="light"] .octa-orbit {
+  opacity: 0.04;
+}
+
+.octa-orbit-1 {
+  width: 80px;
+  height: 93px;
+  /* Radius 240px (diameter 480px) */
+  animation: orbit-tangential-1 25s linear infinite;
+}
+
+.octa-orbit-2 {
+  width: 65px;
+  height: 75px;
+  /* Radius 180px (diameter 360px) */
+  animation: orbit-tangential-2 30s linear infinite;
+}
+
+.octa-orbit-3 {
+  width: 50px;
+  height: 58px;
+  /* Radius 300px (diameter 600px) */
+  animation: orbit-tangential-3 20s linear infinite;
+}
+
+@keyframes orbit-tangential-1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(250px) rotate(450deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@keyframes orbit-tangential-2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(-90deg);
+  }
+}
+
+@keyframes orbit-tangential-3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(350px) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(350px) rotate(450deg);
+  }
+}
+
+@keyframes octa-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.07;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05) rotate(3deg);
+    opacity: 0.09;
+  }
+}
+
+/* ========================================
+   APP STRUCTURE
+   ======================================== */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  z-index: 10;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* ========================================
+   OCTA ICON (inline SVG replacement for ⬢)
+   Used as CSS background-image in ::before/::after
+   ======================================== */
+
+/* Utility: octa icon as background */
+.octa-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url('./assets/octa3.svg') center/contain no-repeat;
+  vertical-align: middle;
+}
+
+/* ========================================
+   GRADIENT UTILITIES
+   ======================================== */
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--blue-medium), var(--blue-darker));
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--blue-light), var(--blue-dark));
+  border-radius: 6px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--blue-medium), var(--blue-darker));
+}
+
+/* ========================================
+   SELECTION & MISC
+   ======================================== */
+
+::selection {
+  background: var(--primary);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes App-logo-spin {
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--primary-glow);
+  }
+}
+
+@keyframes octa-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes octa-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(10deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .octagram-system {
+    top: -75px;
+    right: -75px;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .octagram-center {
+    width: 200px;
+    height: 200px;
+  }
+
+  .octa-track-1 { width: 260px; height: 260px; }
+  .octa-track-2 { width: 160px; height: 160px; }
+  .octa-track-3 { width: 360px; height: 360px; }
+  
+  .octa-orbit-1 { width: 40px; height: 47px; }
+  .octa-orbit-2 { width: 32px; height: 37px; }
+  .octa-orbit-3 { width: 25px; height: 29px; }
+  
+  @keyframes orbit-tangential-1 {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) translateX(130px) rotate(90deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(130px) rotate(450deg); }
+  }
+  @keyframes orbit-tangential-2 {
+    0%   { transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-90deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(-90deg); }
+  }
+  @keyframes orbit-tangential-3 {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(90deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(450deg); }
   }
 }

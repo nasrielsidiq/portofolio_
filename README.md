@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# Mucaa Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio web modern menggunakan React dengan fitur biodata, galeri sosial media, dan sistem artikel berbasis Markdown.
 
-## Available Scripts
+## Fitur
 
-In the project directory, you can run:
+- ✨ **Biodata Dinamis**: Informasi profil yang dapat dikustomisasi melalui .env.local
+- 🎨 **Dual Theme Mode**: Toggle antara tema gelap dan terang dengan gradasi biru
+- ⬢ **Honeycomb Pattern**: Pola honeycomb sebagai ciri khas desain
+- ✦ **Octagram Decorations**: Dekorasi geometric octagram beranimasi
+- 📝 **Sistem Artikel Markdown**: Artikel otomatis dari file .md di folder `/public/artikle`
+- 🌐 **Integrasi Sosial Media**: Pelacakan aktivitas GitHub, LinkedIn, dan Instagram
+- 📱 **Responsive Design**: Tampilan optimal di semua perangkat
+- 🚀 **Modern Stack**: React + React Router + React Markdown + Context API
 
-### `npm start`
+## Struktur Proyek
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+mucaa-portfolio/
+├── public/
+│   └── artikle/              # Folder untuk artikel Markdown
+│       ├── welcome.md
+│       ├── react-tips.md
+│       └── web-performance.md
+├── src/
+│   ├── components/           # Komponen reusable
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   └── ThemeToggle.js    # Toggle tema gelap/terang
+│   ├── contexts/             # React Context
+│   │   └── ThemeContext.js   # Theme state management
+│   ├── pages/                # Halaman aplikasi
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   ├── Articles.js
+│   │   ├── ArticleDetail.js
+│   │   └── Social.js
+│   ├── utils/                # Utility functions
+│   │   ├── articleUtils.js   # Fungsi untuk artikel
+│   │   └── socialUtils.js    # Fungsi untuk sosial media
+│   ├── App.js
+│   └── index.js
+├── .env.local                # Konfigurasi aplikasi
+└── package.json
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalasi
 
-### `npm test`
+1. Clone atau download repository ini
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Copy dan edit file `.env.local` sesuai kebutuhan:
+   ```env
+   REACT_APP_NAME=Your Name
+   REACT_APP_TAGLINE=Your Tagline
+   REACT_APP_BIO=Your Bio
+   REACT_APP_EMAIL=your.email@example.com
+   REACT_APP_GITHUB_USERNAME=yourgithub
+   REACT_APP_LINKEDIN_USERNAME=yourlinkedin
+   REACT_APP_INSTAGRAM_USERNAME=yourinstagram
+   ```
 
-### `npm run build`
+4. Jalankan aplikasi:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Buka browser di `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Menambahkan Artikel Baru
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Buat file `.md` baru di folder `public/artikle/`
+2. Gunakan format frontmatter untuk metadata:
 
-### `npm run eject`
+```markdown
+---
+title: Judul Artikel Anda
+date: 2026-07-02
+author: Nama Anda
+tags: tag1, tag2, tag3
+thumbnail: https://example.com/image.jpg
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Konten Artikel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tulis konten artikel Anda di sini menggunakan Markdown...
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Tambahkan nama file ke array `articleFiles` di `src/utils/articleUtils.js`:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```javascript
+const articleFiles = [
+  'welcome.md',
+  'react-tips.md',
+  'web-performance.md',
+  'nama-artikel-baru.md'  // Tambahkan di sini
+];
+```
 
-## Learn More
+4. Artikel akan otomatis muncul di halaman Articles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Konfigurasi
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Biodata (.env.local)
 
-### Code Splitting
+- `REACT_APP_NAME`: Nama Anda
+- `REACT_APP_TAGLINE`: Tagline/posisi Anda
+- `REACT_APP_BIO`: Deskripsi singkat tentang Anda
+- `REACT_APP_EMAIL`: Email Anda
+- `REACT_APP_LOCATION`: Lokasi Anda
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Sosial Media (.env.local)
 
-### Analyzing the Bundle Size
+- `REACT_APP_GITHUB_USERNAME`: Username GitHub
+- `REACT_APP_LINKEDIN_USERNAME`: Username LinkedIn
+- `REACT_APP_INSTAGRAM_USERNAME`: Username Instagram
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Tema (.env.local)
 
-### Making a Progressive Web App
+- `REACT_APP_PRIMARY_COLOR`: Warna utama (default: #6366f1)
+- `REACT_APP_SECONDARY_COLOR`: Warna sekunder (default: #8b5cf6)
+- `REACT_APP_BACKGROUND_COLOR`: Warna background (default: #0f172a)
+- `REACT_APP_TEXT_COLOR`: Warna teks (default: #f1f5f9)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## API yang Digunakan
 
-### Advanced Configuration
+- **GitHub API**: Untuk menampilkan profile, repositories, dan aktivitas
+  - Endpoint: `https://api.github.com/users/{username}`
+  - Rate limit: 60 requests/hour (tanpa authentication)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Build untuk Production
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+File production akan tersimpan di folder `build/`
 
-### `npm run build` fails to minify
+## Deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aplikasi ini dapat di-deploy ke:
+- Vercel
+- Netlify
+- GitHub Pages
+- Heroku
+- Dan hosting static lainnya
+
+Contoh deploy ke Vercel:
+```bash
+npm install -g vercel
+vercel
+```
+
+## Teknologi yang Digunakan
+
+- **React** 18.x - UI Library
+- **React Router** 6.x - Routing
+- **React Markdown** - Markdown renderer
+- **Axios** - HTTP client
+- **GitHub API** - Data sosial media
+
+## Troubleshooting
+
+### GitHub API Rate Limit
+
+Jika Anda melebihi rate limit GitHub API (60 request/hour):
+- Tunggu 1 jam untuk reset
+- Atau gunakan GitHub Personal Access Token untuk meningkatkan limit ke 5000 request/hour
+
+### Artikel Tidak Muncul
+
+- Pastikan file .md ada di folder `public/artikle/`
+- Pastikan nama file sudah ditambahkan ke `articleFiles` array
+- Check browser console untuk error
+
+## Lisensi
+
+MIT License - Silakan digunakan untuk proyek personal atau komersial
+
+## Kontribusi
+
+Pull requests are welcome! Untuk perubahan besar, mohon buka issue terlebih dahulu untuk diskusi.
+
+---
+
+Dibuat dengan ❤️ menggunakan React
