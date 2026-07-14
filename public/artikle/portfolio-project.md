@@ -4,7 +4,7 @@ date: 2026-07-02
 author: Mucaa
 category: project
 tags: react, portfolio, web-development, project
-thumbnail: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800
+thumbnail: https://res.cloudinary.com/xb1v6pqt/image/upload/f_auto,q_auto/618_1x_shots_so_lqmch3
 ---
 
 # Membangun Portfolio Website dengan React

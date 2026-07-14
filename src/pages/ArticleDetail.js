@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { FaExclamationTriangle, FaCalendarAlt, FaPen } from 'react-icons/fa';
-import { getArticleBySlug, formatDate } from '../utils/articleUtils';
+import { getArticleBySlug, formatDate, DEFAULT_THUMBNAIL } from '../utils/articleUtils';
 import './ArticleDetail.css';
 
 function ArticleDetail() {
@@ -59,15 +59,14 @@ function ArticleDetail() {
         <Link to="/articles" className="back-link">← Back to Articles</Link>
         
         <article className="article">
-          {article.metadata.thumbnail && (
-            <div className="article-hero">
-              <img 
-                src={article.metadata.thumbnail} 
-                alt={article.metadata.title}
-                className="article-hero-image"
-              />
-            </div>
-          )}
+          <div className="article-hero">
+            <img 
+              src={article.metadata.thumbnail || DEFAULT_THUMBNAIL}
+              alt={article.metadata.title}
+              className="article-hero-image"
+              onError={(e) => { e.target.onerror = null; e.target.src = DEFAULT_THUMBNAIL; }}
+            />
+          </div>
           
           <div className="article-header">
             <h1 className="article-title-detail">{article.metadata.title}</h1>

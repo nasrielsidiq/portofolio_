@@ -1,3 +1,6 @@
+// Default thumbnail untuk artikel tanpa gambar
+export const DEFAULT_THUMBNAIL = '/default-thumbnail.svg';
+
 // Utility untuk parse metadata dari Markdown
 export const parseMarkdownMetadata = (content) => {
   const metadataRegex = /^---\n([\s\S]*?)\n---/;

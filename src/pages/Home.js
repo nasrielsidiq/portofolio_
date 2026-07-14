@@ -17,7 +17,7 @@ import {
   FaArrowRight 
 } from 'react-icons/fa';
 import { getProfileData, getGitHubProfile, getGitHubRepos } from '../utils/socialUtils';
-import { getAllArticles } from '../utils/articleUtils';
+import { getAllArticles, DEFAULT_THUMBNAIL } from '../utils/articleUtils';
 import fotoProfil from '../assets/foto-profil.png';
 import './Home.css';
 
@@ -173,15 +173,14 @@ function Home() {
             <div className="projects-grid">
               {projects.map((project) => (
                 <div key={project.slug} className="project-card">
-                  {project.metadata.thumbnail && (
-                    <div className="project-thumbnail-wrapper">
-                      <img 
-                        src={project.metadata.thumbnail} 
-                        alt={project.metadata.title}
-                        className="project-thumbnail"
-                      />
-                    </div>
-                  )}
+                  <div className="project-thumbnail-wrapper">
+                    <img 
+                      src={project.metadata.thumbnail || DEFAULT_THUMBNAIL}
+                      alt={project.metadata.title}
+                      className="project-thumbnail"
+                      onError={(e) => { e.target.onerror = null; e.target.src = DEFAULT_THUMBNAIL; }}
+                    />
+                  </div>
                   <div className="project-card-content">
                     <h3 className="project-card-title">{project.metadata.title}</h3>
                     <p className="project-card-excerpt">{project.excerpt}</p>

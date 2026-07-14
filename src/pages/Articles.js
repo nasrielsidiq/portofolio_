@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaRegFileAlt, FaCalendarAlt, FaPen } from 'react-icons/fa';
-import { getAllArticles, formatDate } from '../utils/articleUtils';
+import { getAllArticles, formatDate, DEFAULT_THUMBNAIL } from '../utils/articleUtils';
 import './Articles.css';
 
 function Articles() {
@@ -70,13 +70,12 @@ function Articles() {
           <div className="articles-grid">
             {filteredArticles.map((article) => (
               <article key={article.slug} className="article-card">
-                {article.metadata.thumbnail && (
-                  <img 
-                    src={article.metadata.thumbnail} 
-                    alt={article.metadata.title}
-                    className="article-thumbnail"
-                  />
-                )}
+                <img 
+                  src={article.metadata.thumbnail || DEFAULT_THUMBNAIL}
+                  alt={article.metadata.title}
+                  className="article-thumbnail"
+                  onError={(e) => { e.target.onerror = null; e.target.src = DEFAULT_THUMBNAIL; }}
+                />
                 <div className="article-content">
                   <div className="article-meta">
                     {article.metadata.date && (

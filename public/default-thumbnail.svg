@@ -1,0 +1,51 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a1628"/>
+      <stop offset="1" stop-color="#0d2137"/>
+    </linearGradient>
+    <linearGradient id="octa" x1="350" y1="100" x2="450" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0098FF"/>
+      <stop offset="1" stop-color="#005B99"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="300" y1="150" x2="500" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0098FF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#005B99" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="center-glow" cx="400" cy="200" r="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0098FF" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#0098FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  <line x1="400" y1="0" x2="400" y2="400" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  <line x1="600" y1="0" x2="600" y2="400" stroke="#0098FF" stroke-width="0.5" stroke-opacity="0.06"/>
+  
+  <!-- Center glow -->
+  <circle cx="400" cy="200" r="120" fill="url(#center-glow)"/>
+  
+  <!-- Octagram SVG (simplified version) -->
+  <g transform="translate(340, 140) scale(0.15)">
+    <path d="M202.755 0.768555C213.375 2.60628 216.826 5.82571 224.511 14.2686C247.894 46.9459 264.149 93.6036 271.375 129.769C273.844 160.386 275.298 174.076 275.511 169.269C282.157 180.586 287.448 187.381 301.011 200.75C321.413 231.578 343.921 277.153 348.967 314.885C348.991 315.713 348.949 316.463 348.967 316.848C349.47 327.155 345.527 336.222 341.431 339.425C334.616 345.006 330.313 347.045 321.333 347.769C303.046 347.418 276.632 338.088 218.833 315.375L199.74 302.614L181.15 315.375C120.476 338.583 96.541 346.286 78.1478 347.278C69.0255 346.787 64.8688 344.718 58.0499 339.916C53.1066 335.528 51.4816 330.743 50.0107 319.302C56.4741 281.042 75.5886 238.813 92.9267 208.766C111.721 187.536 125.771 169.489 125.011 169.269C127.657 126.296 132.244 105.486 135.406 100.266C151.215 57.7508 175.511 13.2686 175.511 13.2686C187.511 2.2715 190.859 2.41585 202.755 0.768555Z" fill="url(#octa)" fill-opacity="0.3"/>
+    <path d="M202.755 0.768555C190.859 2.41585 187.511 2.2715 175.511 13.2686C175.511 13.2686 151.215 57.7508 135.406 100.266C132.244 105.486 127.657 126.296 125.011 169.269C125.771 169.489 111.721 187.536 92.9267 208.766C75.5886 238.813 56.4741 281.042 50.0107 319.302C51.4816 330.743 53.1066 335.528 58.0499 339.916C64.8688 344.718 69.0255 346.787 78.1478 347.278C96.541 346.286 120.476 338.583 181.15 315.375L199.74 302.614L218.833 315.375C276.632 338.088 303.046 347.418 321.333 347.769C330.313 347.045 334.616 345.006 341.431 339.916C345.527 336.222 349.47 327.155 348.967 316.848C348.949 316.463 348.991 315.713 348.967 314.885C343.921 277.153 321.413 231.578 301.011 200.75C287.448 187.381 282.157 180.586 275.511 169.269C275.298 174.076 273.844 160.386 271.375 129.769C264.149 93.6036 247.894 46.9459 224.511 14.2686C216.826 5.82571 213.375 2.60628 202.755 0.768555Z" stroke="#0098FF" stroke-width="4" stroke-opacity="0.5"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="240" text-anchor="middle" fill="#0098FF" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" letter-spacing="2" opacity="0.9">✦ MUCAA PORTFOLIO</text>
+  <text x="400" y="275" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" letter-spacing="4" opacity="0.4">WEB DEVELOPER</text>
+  
+  <!-- Corner accents -->
+  <circle cx="40" cy="40" r="3" fill="#0098FF" opacity="0.2"/>
+  <circle cx="760" cy="40" r="3" fill="#0098FF" opacity="0.2"/>
+  <circle cx="40" cy="360" r="3" fill="#0098FF" opacity="0.2"/>
+  <circle cx="760" cy="360" r="3" fill="#0098FF" opacity="0.2"/>
+</svg>
