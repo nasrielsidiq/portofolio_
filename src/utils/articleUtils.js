@@ -29,13 +29,12 @@ export const getAllArticles = async () => {
   const articlesPath = process.env.REACT_APP_ARTICLES_PATH || '/artikle';
   
   try {
-    // List of articles - dalam production, ini bisa di-generate otomatis
-    const articleFiles = [
-      'welcome.md',
-      'react-tips.md',
-      'web-performance.md',
-      'portfolio-project.md'
-    ];
+    // Ambil daftar artikel dari index file (auto-generated)
+    const indexResponse = await fetch(`${articlesPath}/articleIndex.json`);
+    if (!indexResponse.ok) {
+      throw new Error('articleIndex.json not found. Run: npm run articles:index');
+    }
+    const articleFiles = await indexResponse.json();
 
     const articles = await Promise.all(
       articleFiles.map(async (filename) => {
