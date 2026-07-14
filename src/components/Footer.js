@@ -48,7 +48,7 @@ function Footer() {
             )}
           </div>
           <div className="footer-text">
-            <p>&copy; {currentYear} {profile.name}. Built with React <FaHeart style={{ color: '#ff4d4d' }} /></p>
+            <p>&copy; {currentYear} {profile.name}. Built with React 🐧</p>
           </div>
         </div>
       </div>

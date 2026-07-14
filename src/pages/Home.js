@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { 
   FaLaptop, 
   FaPalette, 
-  FaMobileAlt, 
+  FaMobileAlt,
+  FaServer,
+  FaMobile,
+  FaBug,
   FaGithub, 
   FaUsers, 
   FaUserFriends, 
@@ -134,6 +137,21 @@ function Home() {
               <div className="feature-icon"><FaMobileAlt /></div>
               <h3>Responsive Design</h3>
               <p>Ensuring great experience across all devices</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon"><FaServer /></div>
+              <h3>Backend Developer</h3>
+              <p>Building robust APIs, databases, and server-side logic</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon"><FaMobile /></div>
+              <h3>Mobile Developer</h3>
+              <p>Cross-platform mobile apps with React Native and native tools</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon"><FaBug /></div>
+              <h3>QA</h3>
+              <p>Ensuring software quality through testing and automation</p>
             </div>
           </div>
         </div>
