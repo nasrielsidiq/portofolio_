@@ -1,6 +1,6 @@
 import React from 'react';
 import { getSocialMediaLinks, getProfileData } from '../utils/socialUtils';
-import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
