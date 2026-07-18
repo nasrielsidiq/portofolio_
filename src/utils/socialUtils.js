@@ -106,15 +106,19 @@ export const formatGitHubEvent = (event) => {
 // Profile data - from resume-data.json (async) with .env fallbacks
 export const getProfileData = async () => {
   const data = await loadResumeData();
+  const p = data.personal || {};
   return {
-    name: data.name || process.env.REACT_APP_NAME || 'Mucaa',
+    name: p.name || process.env.REACT_APP_NAME || 'Mucaa',
     tagline: data.tagline || process.env.REACT_APP_TAGLINE || 'Web Developer',
     bio: data.bio || process.env.REACT_APP_BIO || 'Passionate about creating amazing web experiences',
-    email: data.email || process.env.REACT_APP_EMAIL || '',
-    location: data.location || process.env.REACT_APP_LOCATION || '',
-    education: data.education || '',
-    role: data.role || '',
-    interests: data.interests || '',
+    email: p.email || process.env.REACT_APP_EMAIL || '',
+    location: p.city_state_zip || process.env.REACT_APP_LOCATION || '',
+    address: p.address || '',
+    phone: p.phone || '',
+    education: data.education || [],
+    experience: data.experience || [],
+    leadership: data.leadership || [],
+    skills_interests: data.skills_interests || {}
   };
 };
 

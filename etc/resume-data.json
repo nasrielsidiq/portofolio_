@@ -1,29 +1,66 @@
 {
-  "name": "Mucaa",
+  "personal": {
+    "name": "Mucaa",
+    "address": "Home or Campus Street Address",
+    "city_state_zip": "Indonesia",
+    "email": "youremail@college.harvard.edu",
+    "phone": "phone number"
+  },
   "tagline": "Web Developer",
   "bio": "Passionate about creating amazing web experiences. Focused on building modern, responsive applications with clean architecture.",
-  "email": "mucaa@example.com",
-  "location": "Indonesia",
-  "education": "Computer Science",
-  "role": "Full Stack Developer",
-  "interests": "Web Technologies, Open Source, UI/UX Design",
+  "education": [
+    {
+      "institution": "Harvard University",
+      "location": "Cambridge, MA",
+      "degree": "Degree, Concentration",
+      "gpa": "GPA [Note: GPA is Optional]",
+      "graduation_date": "Graduation Date",
+      "thesis": "Thesis [Note: Optional]",
+      "coursework": "Relevant Coursework: [Note: Optional. Awards and honors can also be listed here.]"
+    },
+    {
+      "institution": "Study Abroad [Note: If Applicable]",
+      "location": "City, Country",
+      "degree": "Study abroad coursework",
+      "graduation_date": "Month Year – Month Year"
+    },
+    {
+      "institution": "High School Name",
+      "location": "City, State",
+      "degree": "[Note: May include GPA, SAT/ACT scores, or academic honors an employer may want to know]",
+      "graduation_date": "Graduation Date"
+    }
+  ],
   "experience": [
     {
       "organization": "Company Name",
-      "position": "Web Developer",
       "location": "Remote",
+      "position": "Web Developer",
       "period": "2023 - Present",
-      "highlights": [
-        "Developed and maintained React-based web applications",
-        "Collaborated with cross-functional teams to deliver features",
-        "Optimized application performance and accessibility"
+      "bullets": [
+        "Developed and maintained React-based web applications.",
+        "Collaborated with cross-functional teams to deliver high-quality features.",
+        "Optimized application performance and accessibility for improved user experience."
       ]
     }
   ],
-  "skills": {
-    "frontend": ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
-    "backend": ["Node.js", "Express", "Python", "REST API"],
-    "tools": ["Git", "Docker", "MongoDB", "PostgreSQL"]
+  "leadership": [
+    {
+      "organization": "Organization",
+      "location": "City, State",
+      "role": "Role",
+      "period": "Month Year – Month Year",
+      "bullets": [
+        "Describe your leadership, activities, or achievements in bullet form.",
+        "Begin each line with an action verb and quantify outcomes where possible."
+      ]
+    }
+  ],
+  "skills_interests": {
+    "technical": "React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS, Node.js, Express, Python, REST API, Git, Docker, MongoDB, PostgreSQL",
+    "language": "Indonesian (Native), English (Conversational)",
+    "laboratory": "",
+    "interests": "Web Technologies, Open Source, UI/UX Design"
   },
   "social": {
     "github": "nasrielsidiq",
