@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { getSocialMediaLinks, getProfileData } from '../utils/socialUtils';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
   const socialLinks = getSocialMediaLinks();
-  const profile = getProfileData();
+  const [profile, setProfile] = useState({ name: 'Mucaa' });
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    getProfileData().then(setProfile);
+  }, []);
 
   return (
     <footer className="footer">

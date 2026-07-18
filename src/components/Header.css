@@ -118,6 +118,30 @@
   }
 }
 
+/* Resume button */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--blue-medium), var(--blue-dark));
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--primary-glow);
+  border-color: var(--blue-light);
+  text-decoration: none !important;
+}
+
 @media (max-width: 768px) {
   .nav {
     gap: 1rem;
@@ -129,5 +153,10 @@
   
   .logo h1 {
     font-size: 1.25rem;
+  }
+
+  .resume-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
   }
 }

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { getProfileData, getSocialMediaLinks } from '../utils/socialUtils';
-import { FaLaptopCode, FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaLaptopCode, FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram, FaGraduationCap, FaHeart } from 'react-icons/fa';
 import './About.css';
 
 function About() {
-  const profile = getProfileData();
+  const [profile, setProfile] = useState({});
   const socialLinks = getSocialMediaLinks();
+
+  useEffect(() => {
+    getProfileData().then(setProfile);
+  }, []);
 
   return (
     <div className="about">
@@ -21,6 +25,37 @@ function About() {
           <section className="about-section">
             <h2>Who I Am</h2>
             <p className="about-bio">{profile.bio}</p>
+            
+            <div className="about-info-cards">
+              {profile.education && (
+                <div className="info-card">
+                  <div className="info-card-icon"><FaGraduationCap /></div>
+                  <div className="info-card-content">
+                    <h4>Education</h4>
+                    <p>{profile.education}</p>
+                  </div>
+                </div>
+              )}
+              {profile.role && (
+                <div className="info-card">
+                  <div className="info-card-icon"><FaLaptopCode /></div>
+                  <div className="info-card-content">
+                    <h4>Current Role</h4>
+                    <p>{profile.role}</p>
+                  </div>
+                </div>
+              )}
+              {profile.interests && (
+                <div className="info-card">
+                  <div className="info-card-icon"><FaHeart /></div>
+                  <div className="info-card-content">
+                    <h4>Interests</h4>
+                    <p>{profile.interests}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="about-info">
               {profile.email && (
                 <div className="info-item">

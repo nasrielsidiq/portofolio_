@@ -22,13 +22,17 @@ import fotoProfil from '../assets/foto-profil.png';
 import './Home.css';
 
 function Home() {
-  const profile = getProfileData();
   const githubUsername = process.env.REACT_APP_GITHUB_USERNAME || 'nasrielsidiq';
 
+  const [profile, setProfile] = useState({ name: 'Mucaa', tagline: 'Web Developer' });
   const [projects, setProjects] = useState([]);
   const [githubProfile, setGithubProfile] = useState(null);
   const [githubRepos, setGithubRepos] = useState([]);
   const [loadingGitHub, setLoadingGitHub] = useState(true);
+
+  useEffect(() => {
+    getProfileData().then(setProfile);
+  }, []);
 
   useEffect(() => {
     const loadProjects = async () => {

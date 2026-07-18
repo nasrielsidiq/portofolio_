@@ -1,5 +1,21 @@
 import axios from 'axios';
 
+// Resume data - fetched at runtime from public/resume-data.json
+let _resumeData = null;
+
+const loadResumeData = async () => {
+  if (_resumeData) return _resumeData;
+  try {
+    const res = await fetch('/resume-data.json');
+    if (!res.ok) throw new Error('Not found');
+    _resumeData = await res.json();
+    return _resumeData;
+  } catch (e) {
+    console.error('Error loading resume-data.json:', e);
+    return {};
+  }
+};
+
 // GitHub API - ambil repositories dan aktivitas
 export const getGitHubProfile = async (username) => {
   try {
@@ -87,14 +103,18 @@ export const formatGitHubEvent = (event) => {
   };
 };
 
-// Profile data dari .env
-export const getProfileData = () => {
+// Profile data - from resume-data.json (async) with .env fallbacks
+export const getProfileData = async () => {
+  const data = await loadResumeData();
   return {
-    name: process.env.REACT_APP_NAME || 'Mucaa',
-    tagline: process.env.REACT_APP_TAGLINE || 'Web Developer',
-    bio: process.env.REACT_APP_BIO || 'Passionate about creating amazing web experiences',
-    email: process.env.REACT_APP_EMAIL || '',
-    location: process.env.REACT_APP_LOCATION || '',
+    name: data.name || process.env.REACT_APP_NAME || 'Mucaa',
+    tagline: data.tagline || process.env.REACT_APP_TAGLINE || 'Web Developer',
+    bio: data.bio || process.env.REACT_APP_BIO || 'Passionate about creating amazing web experiences',
+    email: data.email || process.env.REACT_APP_EMAIL || '',
+    location: data.location || process.env.REACT_APP_LOCATION || '',
+    education: data.education || '',
+    role: data.role || '',
+    interests: data.interests || '',
   };
 };
 

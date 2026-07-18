@@ -17,9 +17,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node scripts/generate-article-index.js && react-scripts start",
-    "build": "node scripts/generate-article-index.js && react-scripts build",
+    "start": "node scripts/generate-article-index.js && node scripts/generate-resume.js && react-scripts start",
+    "build": "node scripts/generate-article-index.js && node scripts/generate-resume.js && react-scripts build",
     "articles:index": "node scripts/generate-article-index.js",
+    "resume:generate": "node scripts/generate-resume.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "md-to-pdf": "^5.2.5"
   }
 }

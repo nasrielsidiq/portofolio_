@@ -1,0 +1,33 @@
+{
+  "name": "Mucaa",
+  "tagline": "Web Developer",
+  "bio": "Passionate about creating amazing web experiences. Focused on building modern, responsive applications with clean architecture.",
+  "email": "mucaa@example.com",
+  "location": "Indonesia",
+  "education": "Computer Science",
+  "role": "Full Stack Developer",
+  "interests": "Web Technologies, Open Source, UI/UX Design",
+  "experience": [
+    {
+      "organization": "Company Name",
+      "position": "Web Developer",
+      "location": "Remote",
+      "period": "2023 - Present",
+      "highlights": [
+        "Developed and maintained React-based web applications",
+        "Collaborated with cross-functional teams to deliver features",
+        "Optimized application performance and accessibility"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": ["React", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
+    "backend": ["Node.js", "Express", "Python", "REST API"],
+    "tools": ["Git", "Docker", "MongoDB", "PostgreSQL"]
+  },
+  "social": {
+    "github": "nasrielsidiq",
+    "linkedin": "",
+    "instagram": ""
+  }
+}
