@@ -131,53 +131,88 @@ pdf_options:
 </style>
 
 <div class="header">
-  <div class="name">Mucaa</div>
+  <div class="name">Muhammad Mufti Nasriel Siddiq Martono</div>
   <div class="contact-info">
-    Home or Campus Street Address &bull; Indonesia &bull; <a href="mailto:youremail@college.harvard.edu">youremail@college.harvard.edu</a> &bull; phone number
+    Tasikmalaya, West Java &bull; Indonesia &bull; <a href="mailto:muhammadmuftinasrilsidiqmartono@gmail.com">muhammadmuftinasrilsidiqmartono@gmail.com</a> &bull; +62 895-3007-2895
   </div>
   <div class="header-divider"></div>
 </div>
 
 <h1>Education</h1>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-bold">Harvard University</span>
-  <span class="right-normal">Cambridge, MA</span>
+  <span class="left-bold">Akpar Nusantara</span>
+  <span class="right-normal">Tanggerang Selatan, Banten</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-italic-detail">Degree, Concentration, GPA [Note: GPA is Optional]</span>
-  <span class="right-italic-detail">Graduation Date</span>
-</div>
-<div class="thesis-detail">Thesis: Thesis [Note: Optional]</div>
-<div class="coursework-detail">Relevant Coursework: [Note: Optional. Awards and honors can also be listed here.]</div>
-<div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-bold">Study Abroad [Note: If Applicable]</span>
-  <span class="right-normal">City, Country</span>
+  <span class="left-italic-detail">Management Pariwisata</span>
+  <span class="right-italic-detail">-</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-italic-detail">Study abroad coursework</span>
-  <span class="right-italic-detail">Month Year – Month Year</span>
+  <span class="left-bold">SMKS YPC Tasikmalaya</span>
+  <span class="right-normal">Tasikmalaya, West Java</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-bold">High School Name</span>
-  <span class="right-normal">City, State</span>
+  <span class="left-italic-detail">Pengembangan Perangkat Lunak dan Gim, 85</span>
+  <span class="right-italic-detail">2025</span>
+</div>
+<div class="coursework-detail">BNSP UI/UX Designer, LKS Provinsi Web Developer, Coding clash National</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-bold">MTS PSA Miftahul Fallah</span>
+  <span class="right-normal">Tasikmalaya, West Java</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-italic-detail">[Note: May include GPA, SAT/ACT scores, or academic honors an employer may want to know]</span>
-  <span class="right-italic-detail">Graduation Date</span>
+  <span class="left-italic-detail">-, 80</span>
+  <span class="right-italic-detail">2022</span>
+</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-bold">MIS Sindangsono</span>
+  <span class="right-normal">Tasikmalaya, West Java</span>
+</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-italic-detail">-, 80</span>
+  <span class="right-italic-detail">2019</span>
 </div>
 <h1>Experience</h1>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-bold">Company Name</span>
+  <span class="left-bold">Chlorine Digital Media & Technology</span>
   <span class="right-normal">Remote</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-italic-detail">Web Developer</span>
-  <span class="right-italic-detail">2023 - Present</span>
+  <span class="left-italic-detail">Project Manager</span>
+  <span class="right-italic-detail">June 2024 - Sep 2024</span>
 </div>
 <ul class="bullets">
-  <li>Developed and maintained React-based web applications.</li>
-  <li>Collaborated with cross-functional teams to deliver high-quality features.</li>
-  <li>Optimized application performance and accessibility for improved user experience.</li>
+  <li>Managed and coordinated web development projects, ensuring timely delivery and quality standards.</li>
+  <li>Collaborated with cross-functional teams to define project scope, objectives, and deliverables.</li>
+  <li>Implemented agile methodologies to streamline workflows and improve team productivity.</li>
+</ul>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-bold">Telkom Indonesia</span>
+  <span class="right-normal">Bandung, West Java</span>
+</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-italic-detail">UI/UX Designer & Frontend Developer</span>
+  <span class="right-italic-detail">January 2025 - April 2025</span>
+</div>
+<ul class="bullets">
+  <li>Designed and developed user-friendly interfaces for internal web applications using React and Tailwind CSS.</li>
+  <li>Collaborated with stakeholders to gather requirements and translate them into high-fidelity prototypes.</li>
+  <li>Implemented responsive designs and optimized frontend performance, improving user experience and load times.</li>
+  <li>Conducted user testing and feedback sessions to iterate on designs and enhance usability.</li>
+</ul>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-bold">PT. Makerindo Prima Solusi</span>
+  <span class="right-normal">Bandung, West Java</span>
+</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-italic-detail">Web Developer</span>
+  <span class="right-italic-detail">June 2025 - July 2026</span>
+</div>
+<ul class="bullets">
+  <li>Developed and maintained web applications using React, Node.js, and PostgreSQL.</li>
+  <li>Collaborated with backend developers to integrate RESTful APIs and ensure seamless data flow.</li>
+  <li>Implemented responsive designs and optimized frontend performance for various devices.</li>
+  <li>Participated in code reviews and contributed to improving code quality and best practices.</li>
 </ul>
 <h1>Leadership & Activities</h1>
 <div class="flex-row" style="margin-left: 9pt;">
@@ -194,7 +229,7 @@ pdf_options:
 </ul>
 <h1>Skills & Interests</h1>
 <div class="skills-interests-section">
-  <p><strong>Technical:</strong> React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS, Node.js, Express, Python, REST API, Git, Docker, MongoDB, PostgreSQL</p>
+  <p><strong>Technical:</strong> UI Design, UX Design, Design Graphics, React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS, Node.js, Express, Python, Golang, REST API, Git, Docker, PostgreSQL</p>
   <p><strong>Language:</strong> Indonesian (Native), English (Conversational)</p>
-  <p><strong>Interests:</strong> Web Technologies, Open Source, UI/UX Design</p>
+  <p><strong>Interests:</strong> Web Technologies, Open Source, UI/UX Design, Backend Development, Cloud Computing, Continuous Learning</p>
 </div>

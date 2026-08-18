@@ -1,46 +1,77 @@
 {
   "personal": {
-    "name": "Mucaa",
-    "address": "Home or Campus Street Address",
+    "name": "Muhammad Mufti Nasriel Siddiq Martono",
+    "address": "Tasikmalaya, West Java",
     "city_state_zip": "Indonesia",
-    "email": "youremail@college.harvard.edu",
-    "phone": "phone number"
+    "email": "muhammadmuftinasrilsidiqmartono@gmail.com",
+    "phone": "+62 895-3007-2895"
   },
   "tagline": "Web Developer",
   "bio": "Passionate about creating amazing web experiences. Focused on building modern, responsive applications with clean architecture.",
   "education": [
     {
-      "institution": "Harvard University",
-      "location": "Cambridge, MA",
-      "degree": "Degree, Concentration",
-      "gpa": "GPA [Note: GPA is Optional]",
-      "graduation_date": "Graduation Date",
-      "thesis": "Thesis [Note: Optional]",
-      "coursework": "Relevant Coursework: [Note: Optional. Awards and honors can also be listed here.]"
+      "institution": "Akpar Nusantara",
+      "location": "Tanggerang Selatan, Banten",
+      "degree": "Management Pariwisata",
+      "graduation_date": "-"
     },
     {
-      "institution": "Study Abroad [Note: If Applicable]",
-      "location": "City, Country",
-      "degree": "Study abroad coursework",
-      "graduation_date": "Month Year – Month Year"
+      "institution": "SMKS YPC Tasikmalaya",
+      "location": "Tasikmalaya, West Java",
+      "degree": "Pengembangan Perangkat Lunak dan Gim",
+      "gpa": "85",
+      "graduation_date": "2025",
+      "coursework": "BNSP UI/UX Designer, LKS Provinsi Web Developer, Coding clash National"
     },
     {
-      "institution": "High School Name",
-      "location": "City, State",
-      "degree": "[Note: May include GPA, SAT/ACT scores, or academic honors an employer may want to know]",
-      "graduation_date": "Graduation Date"
+      "institution": "MTS PSA Miftahul Fallah",
+      "location": "Tasikmalaya, West Java",
+      "degree": "-",
+      "gpa": "80",
+      "graduation_date": "2022"
+    },
+    {
+      "institution": "MIS Sindangsono",
+      "location": "Tasikmalaya, West Java",
+      "degree": "-",
+      "gpa": "80",
+      "graduation_date": "2019"
     }
   ],
   "experience": [
     {
-      "organization": "Company Name",
+      "organization": "Chlorine Digital Media & Technology",
       "location": "Remote",
-      "position": "Web Developer",
-      "period": "2023 - Present",
+      "position": "Project Manager",
+      "period": "June 2024 - Sep 2024",
       "bullets": [
-        "Developed and maintained React-based web applications.",
-        "Collaborated with cross-functional teams to deliver high-quality features.",
-        "Optimized application performance and accessibility for improved user experience."
+        "Managed and coordinated web development projects, ensuring timely delivery and quality standards.",
+        "Collaborated with cross-functional teams to define project scope, objectives, and deliverables.",
+        "Implemented agile methodologies to streamline workflows and improve team productivity."
+      ]
+    },
+    {
+      "organization": "Telkom Indonesia",
+      "location": "Bandung, West Java",
+      "position": "UI/UX Designer & Frontend Developer",
+      "period": "January 2025 - April 2025",
+      "bullets":[
+        "Designed and developed user-friendly interfaces for internal web applications using React and Tailwind CSS.",
+        "Collaborated with stakeholders to gather requirements and translate them into high-fidelity prototypes.",
+        "Implemented responsive designs and optimized frontend performance, improving user experience and load times.",
+        "Conducted user testing and feedback sessions to iterate on designs and enhance usability."
+      ]
+    },
+    {
+      "organization": "PT. Makerindo Prima Solusi",
+      "location": "Bandung, West Java",
+      "position": "Web Developer",
+      "period": "June 2025 - July 2026",
+      "bullets": [
+        "Developed and maintained web applications using React, Node.js, and PostgreSQL.",
+        "Collaborated with backend developers to integrate RESTful APIs and ensure seamless data flow.",
+        "Implemented responsive designs and optimized frontend performance for various devices.",
+        "Participated in code reviews and contributed to improving code quality and best practices."
       ]
     }
   ],
@@ -57,14 +88,14 @@
     }
   ],
   "skills_interests": {
-    "technical": "React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS, Node.js, Express, Python, REST API, Git, Docker, MongoDB, PostgreSQL",
+    "technical": "UI Design, UX Design, Design Graphics, React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS, Node.js, Express, Python, Golang, REST API, Git, Docker, PostgreSQL",
     "language": "Indonesian (Native), English (Conversational)",
     "laboratory": "",
-    "interests": "Web Technologies, Open Source, UI/UX Design"
+    "interests": "Web Technologies, Open Source, UI/UX Design, Backend Development, Cloud Computing, Continuous Learning"
   },
   "social": {
     "github": "nasrielsidiq",
-    "linkedin": "",
-    "instagram": ""
+    "linkedin": "https://www.linkedin.com/in/m-mufti-nasril-sidiq-martono-081515261/",
+    "instagram": "mmuftinasrilsidiqmartono"
   }
 }
