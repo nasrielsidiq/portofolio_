@@ -77,13 +77,25 @@
   ],
   "leadership": [
     {
-      "organization": "Organization",
-      "location": "City, State",
-      "role": "Role",
-      "period": "Month Year – Month Year",
+      "organization": "Osis SMKS YPC Tasikmalaya",
+      "location": "Tasikmalaya, West Java",
+      "role": "Sekretaris 1",
+      "period": "2023 - 2024",
       "bullets": [
-        "Describe your leadership, activities, or achievements in bullet form.",
-        "Begin each line with an action verb and quantify outcomes where possible."
+        "Organized and coordinated school events, meetings, and activities, ensuring smooth operations and effective communication.",
+        "Managed documentation and records, maintaining accurate and up-to-date information for the organization.",
+        "Collaborated with team members to plan and execute initiatives that enhanced the school community and student engagement."
+      ]
+    },
+    {
+      "organization": "Codelabs SMKS YPC Tasikmalaya",
+      "location": "Tasikmalaya, West Java",
+      "role": "Computer Lab Head",
+      "period": "2024 - 2025",
+      "bullets": [
+        "Oversaw the management and maintenance of the computer lab, ensuring all equipment and software were up-to-date and functional.",
+        "Provided technical support and guidance to students and staff, assisting with troubleshooting and resolving issues.",
+        "Organized workshops and training sessions to enhance students' technical skills and knowledge in web development and programming."
       ]
     }
   ],

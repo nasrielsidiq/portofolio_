@@ -216,16 +216,30 @@ pdf_options:
 </ul>
 <h1>Leadership & Activities</h1>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-bold">Organization</span>
-  <span class="right-normal">City, State</span>
+  <span class="left-bold">Osis SMKS YPC Tasikmalaya</span>
+  <span class="right-normal">Tasikmalaya, West Java</span>
 </div>
 <div class="flex-row" style="margin-left: 9pt;">
-  <span class="left-italic-detail">Role</span>
-  <span class="right-italic-detail">Month Year – Month Year</span>
+  <span class="left-italic-detail">Sekretaris 1</span>
+  <span class="right-italic-detail">2023 - 2024</span>
 </div>
 <ul class="bullets">
-  <li>Describe your leadership, activities, or achievements in bullet form.</li>
-  <li>Begin each line with an action verb and quantify outcomes where possible.</li>
+  <li>Organized and coordinated school events, meetings, and activities, ensuring smooth operations and effective communication.</li>
+  <li>Managed documentation and records, maintaining accurate and up-to-date information for the organization.</li>
+  <li>Collaborated with team members to plan and execute initiatives that enhanced the school community and student engagement.</li>
+</ul>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-bold">Codelabs SMKS YPC Tasikmalaya</span>
+  <span class="right-normal">Tasikmalaya, West Java</span>
+</div>
+<div class="flex-row" style="margin-left: 9pt;">
+  <span class="left-italic-detail">Computer Lab Head</span>
+  <span class="right-italic-detail">2024 - 2025</span>
+</div>
+<ul class="bullets">
+  <li>Oversaw the management and maintenance of the computer lab, ensuring all equipment and software were up-to-date and functional.</li>
+  <li>Provided technical support and guidance to students and staff, assisting with troubleshooting and resolving issues.</li>
+  <li>Organized workshops and training sessions to enhance students' technical skills and knowledge in web development and programming.</li>
 </ul>
 <h1>Skills & Interests</h1>
 <div class="skills-interests-section">
