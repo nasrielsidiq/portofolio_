@@ -317,4 +317,173 @@
     font-size: 0.8rem;
     padding: 0.4rem 0.75rem;
   }
+
+  /* Mobile paper preview adjustments */
+  .resume-paper-preview {
+    padding: 1.5rem;
+    min-height: auto;
+    font-size: 10.5pt;
+    line-height: 1.2;
+  }
+
+  .resume-paper-preview .header {
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .resume-paper-preview .contact-info {
+    font-size: 10pt;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .resume-paper-preview .flex-row {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-left: 0;
+  }
+
+  .resume-paper-preview .flex-row[style*="margin-left: 9pt"] {
+    margin-left: 0;
+  }
+
+  .resume-paper-preview .left-bold,
+  .resume-paper-preview .left-italic-detail {
+    width: 100%;
+    margin-bottom: 0.125rem;
+  }
+
+  .resume-paper-preview .right-normal,
+  .resume-paper-preview .right-italic-detail {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.125rem;
+  }
+
+  .resume-paper-preview .bullets {
+    padding-left: 24pt;
+  }
+
+  .resume-paper-preview .bullets li {
+    font-size: 10pt;
+    line-height: 1.15;
+  }
+
+  .resume-paper-preview .thesis-detail,
+  .resume-paper-preview .coursework-detail {
+    margin-left: 12pt;
+    font-size: 10pt;
+  }
+
+  .resume-paper-preview .skills-interests-section p {
+    margin-left: 12pt;
+    font-size: 10pt;
+    line-height: 1.2;
+  }
+
+  .resume-paper-preview h1 {
+    font-size: 10.5pt;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-modal {
+    width: 100%;
+    max-height: 95vh;
+    border-radius: 0;
+    height: 100vh;
+    max-width: 100%;
+  }
+
+  .resume-modal-header {
+    padding: 0.75rem;
+    border-radius: 0;
+  }
+
+  .resume-modal-body {
+    padding: 0.75rem;
+  }
+
+  .resume-paper-preview-container {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .resume-paper-preview {
+    padding: 1rem;
+    border-radius: 0;
+    font-size: 10pt;
+    line-height: 1.2;
+    box-shadow: none;
+    min-height: 100%;
+  }
+
+  .resume-paper-preview .header {
+    margin-top: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .resume-paper-preview .name {
+    font-size: 10pt;
+  }
+
+  .resume-paper-preview .contact-info {
+    font-size: 9.5pt;
+    margin-top: 3px;
+    margin-bottom: 4px;
+  }
+
+  .resume-paper-preview .header-divider {
+    margin: 3px 0 8px 0;
+  }
+
+  .resume-paper-preview .flex-row {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .resume-paper-preview .left-bold,
+  .resume-paper-preview .left-italic-detail,
+  .resume-paper-preview .right-normal,
+  .resume-paper-preview .right-italic-detail {
+    width: 100%;
+    text-align: left;
+  }
+
+  .resume-paper-preview .bullets {
+    padding-left: 20pt;
+  }
+
+  .resume-paper-preview .bullets li {
+    font-size: 9.5pt;
+  }
+
+  .resume-paper-preview .thesis-detail,
+  .resume-paper-preview .coursework-detail {
+    margin-left: 8pt;
+    font-size: 9.5pt;
+  }
+
+  .resume-paper-preview .skills-interests-section p {
+    margin-left: 8pt;
+    font-size: 9.5pt;
+  }
+
+  .resume-paper-preview h1 {
+    font-size: 10pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
 }
